@@ -1,0 +1,96 @@
+apiWise:
+  config:
+    list:
+      - apiName: default
+        http:
+          responseTimeout: 3000
+      - apiName: /pgmc-adapter/api/v1/details/merchant/profile/info
+        http:
+          responseTimeout: 700
+        cache:
+          enabled: true
+          cache-key: MERCHANT_PROFILE_INFO_
+          ttl: 3600
+      - apiName: /pgmc-adapter/api/v2/details/merchant/vpa
+        http:
+          responseTimeout: 700
+        cache:
+          enabled: true
+          cache-key: MERCHANT_DETAILS_INFO_
+          ttl: 3600
+      - apiName: /pgmc-adapter/api/v3/details/merchant/vpa
+        http:
+          responseTimeout: 700
+        cache:
+          enabled: true
+          cache-key: VPA_QUERY_DETAILS_INFO_
+          ttl: 3600
+      - apiName: /get/entityurlinformid
+        http:
+          responseTimeout: 500
+        cache:
+          enabled: true
+          cache-key: M_URL_INFO_
+      - apiName: /get/merchantapiurlinfo
+        http:
+          responseTimeout: 500
+        cache:
+          enabled: true
+          cache-key: M_API_URL_INFO_
+      - apiName: /merchant/get/extended/info/v3
+        http:
+          responseTimeout: 500
+        cache:
+          enabled: true
+          cache-key: PG2_MERCHANT_EXTENDED_
+      - apiName: /merchant/get/preference/info
+        http:
+          responseTimeout: 500
+        cache:
+          enabled: true
+          cache-key: M_PREFERENCE_
+      - apiName: /merchant/fetch/attribute
+        http:
+          responseTimeout: 500
+        cache:
+          enabled: true
+          cache-key: GENERIC_ATTRIBUTE_
+      - apiName: /merchant/v3/paytm
+        http:
+          responseTimeout: 500
+        cache:
+          enabled: true
+          cache-key: CACHE_KEY_FOR_OLDPG_AND_PAYTM_ID_
+      - apiName: /user/v3
+        http:
+          responseTimeout: 500
+        cache:
+          enabled: true
+          cache-key: PG2_UID_P_A_
+      - apiName: /acquiring/createOrderAndPay/v2
+        http:
+          responseTimeout: 1000
+      - apiName: /acquiring/createOrderAndPay
+        http:
+          responseTimeout: 1000
+      - apiName: /acquiring/payOrder
+        http:
+          responseTimeout: 1000
+      - apiName: /acquiring/inquireWithOrderId
+        http:
+          responseTimeout: 1000
+      - apiName: /aoa-order-status/v1/lookUp
+        http:
+          responseTimeout: 1000
+      - apiName: /commonstorage/api/fetchDocuments
+        http:
+          responseTimeout: 250
+      - apiName: /fee/v1/batch-consult
+        http:
+          responseTimeout: 700
+      - apiName: /paymentConsult
+        http:
+          responseTimeout: 1000
+      - apiName: /pgrtdd/consume/bizOrder/transactionListQuery.htm
+        http:
+          responseTimeout: 500

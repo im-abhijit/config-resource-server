@@ -1,0 +1,12 @@
+#resilience4j.circuitbreaker:
+#  instances:
+#    MERCHANT_PROFILE_INFO:
+#      failureRateThreshold: 20
+#      slowCallDurationThreshold: 300
+#      registerHealthIndicator: true
+#      slidingWindowSize: 10
+#      permittedNumberOfCallsInHalfOpenState: 10
+#      slidingWindowType: COUNT_BASED
+#      minimumNumberOfCalls: 20
+#      record-exceptions:
+#        - com.paytm.upipspprocessor.exception.FacadeUncheckedException

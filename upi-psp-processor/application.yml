@@ -1,0 +1,14 @@
+management:
+  endpoints:
+    web:
+      exposure:
+        exclude: "*"
+spring:
+  webflux:
+    base-path: /upi-psp-processor
+  cloud:
+    stream:
+      kafka:
+        binder:
+          brokers: "dr-pgp-nontrans-kafka-aws1.ppslprod.local:9092,dr-pgp-nontrans-kafka-aws2.ppslprod.local:9092,dr-pgp-nontrans-kafka-aws3.ppslprod.local:9092"
+          zkNodes: "dr-pgp-nontrans-kafka-aws1.ppslprod.local:2181,dr-pgp-nontrans-kafka-aws2.ppslprod.local:2181,dr-pgp-nontrans-kafka-aws3.ppslprod.local:2181"

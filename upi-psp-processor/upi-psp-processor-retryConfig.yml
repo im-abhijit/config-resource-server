@@ -1,0 +1,29 @@
+resilience4j.retry:
+  instances:
+#    MERCHANT_PROFILE_INFO:
+#      #Request Timeline 0 2 6
+#      max-attempts: 3 #maxAttempts must be greater than or equal to 1
+#      enable-exponential-backoff: true
+#      exponential-backoff-multiplier: 2
+#      wait-duration: 1s
+#      exponential-max-wait-duration: 1s
+#      retry-exceptions:
+#        - com.paytm.upipspprocessor.exception.FacadeUncheckedException
+#    COMMON_STORAGE_FETCH_FORM:
+#      #Request Timeline 0 20 50 250 1250 6250
+#      #Time line 0 20 70 320 1570 7820
+#      max-attempts: 6 #maxAttempts must be greater than or equal to 1
+#      enable-exponential-backoff: true
+#      exponential-backoff-multiplier: 1
+#      wait-duration: 100ms
+#      exponential-max-wait-duration: 7s
+#      retry-exceptions:
+#        - com.paytm.upipspprocessor.exception.FetchBankFormFailedException
+    POLL_REDIS_FOR_BANK_FORM_STATE:
+      max-attempts: 3 #maxAttempts must be greater than or equal to 1
+      enable-exponential-backoff: true
+      exponential-backoff-multiplier: 3
+      wait-duration: 300 #in millisecond
+      exponential-max-wait-duration: 3000 #in millisecond
+      retry-exceptions:
+        - com.paytm.upipspprocessor.exception.BankFormNotifyException
